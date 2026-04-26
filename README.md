@@ -1,8 +1,8 @@
 # AlonahLowry_MAD_Final_Project
 This repository is for my Mobile Application Development final project
 
-## April 12, 2026 Update
-Currently, I edited the home page to the color purple. I also was able to add three check boxes. The code is below:
+## April 26, 2026 Update
+Today, I added the three food options for each check box. I also color-coded each option and check box. The code is below:
 
 ### activity_main.xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -12,7 +12,9 @@ Currently, I edited the home page to the color purple. I also was able to add th
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
 
     <TextView
         android:id="@+id/welcome_text"
@@ -24,56 +26,194 @@ Currently, I edited the home page to the color purple. I also was able to add th
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="VisualLintSystemUi" />
 
     <TextView
         android:id="@+id/allergy_question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/allergy_question"
         android:textAlignment="center"
         android:textColor="@color/purple"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome_text" />
 
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="115dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="450dp"
+        android:id="@+id/peanut_checkbox"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:drawableTint="#FF9800"
         android:text="@string/Peanuts"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#D37D0B"
+        android:textColorLink="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/allergy_question"
-        app:layout_constraintVertical_bias="0.761"
-        tools:ignore="VisualLintOverlap" />
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="123dp"
-        android:layout_height="51dp"
+        android:id="@+id/tree_nuts_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
         android:text="@string/tree_nuts"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="290dp" />
+        android:textColor="#4CAF50"
+        android:textColorLink="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peanut_checkbox"
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="116dp"
-        android:layout_height="50dp"
+        android:id="@+id/both_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:text="@string/both"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="355dp" />
+        android:textColor="#C752DC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tree_nuts_checkbox"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="239dp"
+        android:layout_height="49dp"
+        android:autofillHints=""
+        android:drawableTint="#FF9800"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/jamaican_jerk_chicken"
+        android:textColor="#D37D0B"
+        android:textColorLink="#FF9800"
+        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="223dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:drawableTint="#FF9800"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/insalta_di_pasta"
+        android:textColor="#D37D0B"
+        android:textColorLink="#FF9800"
+        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="226dp"
+        android:layout_height="49dp"
+        android:autofillHints=""
+        android:drawableTint="#FF9800"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/flan_de_la_abuela"
+        android:textColor="#D37D0B"
+        android:textColorLink="#FF9800"
+        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/sha_cha_beef_bao_bun"
+        android:textColor="#4CAF50"
+        android:textColorLink="#4CAF50"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="286dp"
+        android:layout_height="42dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/Miso"
+        android:textColor="#4CAF50"
+        android:textColorLink="#4CAF50"
+        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <EditText
+        android:id="@+id/editTextText7"
+        android:layout_width="263dp"
+        android:layout_height="46dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/hot_honey"
+        android:textColor="#4CAF50"
+        android:textColorLink="#4CAF50"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck,TextSizeCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="474dp" />
+
+    <EditText
+        android:id="@+id/editTextText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/tenderloin"
+        android:textColor="#C752DC"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <EditText
+        android:id="@+id/editTextText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/pretzel_bread"
+        android:textColor="#C752DC"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <EditText
+        android:id="@+id/editTextText10"
+        android:layout_width="246dp"
+        android:layout_height="41dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/crossant"
+        android:textColor="#C752DC"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck,TextContrastCheck"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="665dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,6 +255,17 @@ Currently, I edited the home page to the color purple. I also was able to add th
     <string name="Peanuts">Peanuts</string>
     <string name="tree_nuts">Tree Nuts</string>
     <string name="both">Both</string>
+    <string name="selection_details">Selection Details</string>
+    <string name="selected_format">Selected: %1$s</string>
+    <string name="jamaican_jerk_chicken">Jamaican Jerk Chicken</string>
+    <string name="insalta_di_pasta">Insalta di Pasta</string>
+    <string name="flan_de_la_abuela">Flan de la Abuela</string>
+    <string name="sha_cha_beef_bao_bun">Sha Cha Beef Bao Bun</string>
+    <string name="Miso">Miso Cola-glazed Sticky Pork Ribs</string>
+    <string name="hot_honey">Hot Honey Chicken Sandwich</string>
+    <string name="tenderloin">Beef Tenderloin Tips</string>
+    <string name="pretzel_bread">Toasted Pretzel Bread</string>
+    <string name="crossant">Crossant with Goat Cheese</string>
     @string CheckBox
 
 </resources>
@@ -154,6 +305,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        findViewById(R.id.peanut_checkbox);
+        findViewById(R.id.tree_nuts_checkbox);
+        findViewById(R.id.both_checkbox);
+
+
     }
 }
 
