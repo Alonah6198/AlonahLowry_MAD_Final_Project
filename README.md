@@ -1,7 +1,7 @@
 # AlonahLowry_MAD_Final_Project
 This repository is for my Mobile Application Development final project
 
-## April 26, 2026 Update
+## May 3, 2026 Update
 Today, I added the three food options for each check box. I also color-coded each option and check box. The code is below:
 
 ### activity_main.xml
