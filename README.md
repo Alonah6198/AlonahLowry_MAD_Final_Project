@@ -2,7 +2,7 @@
 This repository is for my Mobile Application Development final project
 
 ## May 3, 2026 Update
-Today, I added the three food options for each check box. I also color-coded each option and check box. The code is below:
+Today, I added three dishes for each checkbox. I also added constraints to the dishes to prevent them from colliding with each other. The code is below:
 
 ### activity_main.xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,6 +93,8 @@ Today, I added the three food options for each check box. I also color-coded eac
         android:id="@+id/editTextText2"
         android:layout_width="239dp"
         android:layout_height="49dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:drawableTint="#FF9800"
         android:ems="10"
@@ -100,14 +102,15 @@ Today, I added the three food options for each check box. I also color-coded eac
         android:text="@string/jamaican_jerk_chicken"
         android:textColor="#D37D0B"
         android:textColorLink="#FF9800"
-        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peanut_checkbox"
+        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="223dp"
         android:layout_height="48dp"
+        android:layout_marginStart="32dp"
         android:autofillHints=""
         android:drawableTint="#FF9800"
         android:ems="10"
@@ -115,14 +118,15 @@ Today, I added the three food options for each check box. I also color-coded eac
         android:text="@string/insalta_di_pasta"
         android:textColor="#D37D0B"
         android:textColorLink="#FF9800"
-        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText4"
         android:layout_width="226dp"
         android:layout_height="49dp"
+        android:layout_marginStart="32dp"
         android:autofillHints=""
         android:drawableTint="#FF9800"
         android:ems="10"
@@ -130,90 +134,100 @@ Today, I added the three food options for each check box. I also color-coded eac
         android:text="@string/flan_de_la_abuela"
         android:textColor="#D37D0B"
         android:textColorLink="#FF9800"
-        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
+        tools:ignore="LabelFor,MissingConstraints,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/sha_cha_beef_bao_bun"
         android:textColor="#4CAF50"
         android:textColorLink="#4CAF50"
-        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tree_nuts_checkbox"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText6"
         android:layout_width="286dp"
         android:layout_height="42dp"
+        android:layout_marginStart="32dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/Miso"
         android:textColor="#4CAF50"
         android:textColorLink="#4CAF50"
-        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="432dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText5"
+        tools:ignore="LabelFor,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText7"
         android:layout_width="263dp"
         android:layout_height="46dp"
+        android:layout_marginStart="32dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/hot_honey"
         android:textColor="#4CAF50"
         android:textColorLink="#4CAF50"
-        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck,TextSizeCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="474dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck,TextSizeCheck" />
 
     <EditText
         android:id="@+id/editTextText8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/tenderloin"
         android:textColor="#C752DC"
-        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="575dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/both_checkbox"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/pretzel_bread"
         android:textColor="#C752DC"
-        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="620dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText8"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextText10"
         android:layout_width="246dp"
         android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="@string/crossant"
         android:textColor="#C752DC"
-        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="665dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText9"
+        tools:ignore="LabelFor,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -312,5 +326,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+}
 }
 
